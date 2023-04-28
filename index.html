@@ -1,99 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./logo/default.png">
-  
+
   <title>Clarkky | Multi-step form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; margin: 2em auto; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      margin: 2em auto;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
-  
+
   <div class="container">
     <div class="bg-img">
-        <img src="./assets/images/bg-sidebar-mobile.svg" alt="" class="phone-bg desktop-state">
-        <img src="./assets/images/bg-sidebar-desktop.svg" alt="" class="desktop-bg phone-state">
-    
-        <div class="step-num">
-          <!-- STEP 1-->
-            <div class="step">
-                  <div class="step-number active-num">
-                    <p>1</p>
-                  </div>
-                  <div class="label-step phone-step">
-                    <p>STEP 1</p>
-                    <h3>YOUR INFO</h3>
-                  </div>
-            </div>
-            <!-- STEP 2-->
-            <div class="step">
-              <div class="step-number active-num">
-                <p>2</p>
-              </div>
-              <div class="label-step phone-step">
-                <p>STEP 2</p>
-                <h3>SELECT PLAN</h3>
-              </div>
-            </div>
-            <!-- STEP 3-->
-            <div class="step">
-              <div class="step-number active-num">
-                <p>3</p>
-              </div>
-              <div class="label-step phone-step">
-                <p>STEP 2</p>
-                <h3>ADD-ONS</h3>
-              </div>
-            </div>
-            <!-- STEP 4-->
-            <div class="step">
-              <div class="step-number active-num">
-                <p>4</p>
-              </div>
-              <div class="label-step phone-step">
-                <p>STEP 4</p>
-                <h3>SUMMARY</h3>
-              </div>
-            </div>
-        </div> <!-- STEP NUMBER -->
-  
+      <img src="./assets/images/bg-sidebar-mobile.svg" alt="" class="phone-bg desktop-state">
+      <img src="./assets/images/bg-sidebar-desktop.svg" alt="" class="desktop-bg phone-state">
 
-    <!--Form-->
+      <div class="step-num">
+        <!-- STEP 1-->
+        <div class="step">
+          <div class="step-number active-num">
+            <p>1</p>
+          </div>
+          <div class="label-step phone-step">
+            <p>STEP 1</p>
+            <h3>YOUR INFO</h3>
+          </div>
+        </div>
+        <!-- STEP 2-->
+        <div class="step">
+          <div class="step-number active-num">
+            <p>2</p>
+          </div>
+          <div class="label-step phone-step">
+            <p>STEP 2</p>
+            <h3>SELECT PLAN</h3>
+          </div>
+        </div>
+        <!-- STEP 3-->
+        <div class="step">
+          <div class="step-number active-num">
+            <p>3</p>
+          </div>
+          <div class="label-step phone-step">
+            <p>STEP 2</p>
+            <h3>ADD-ONS</h3>
+          </div>
+        </div>
+        <!-- STEP 4-->
+        <div class="step">
+          <div class="step-number active-num">
+            <p>4</p>
+          </div>
+          <div class="label-step phone-step">
+            <p>STEP 4</p>
+            <h3>SUMMARY</h3>
+          </div>
+        </div>
+      </div> <!-- STEP NUMBER -->
 
-    <form id="form" class="form-container">
-      <div class="form-step active" id="step-1">
+
+      <!--Form-->
+
+      <form id="form" class="form-container">
+        <div class="form-step active" id="step-1">
           <h2>Personal Info</h2>
           <p>Please provide your name, email address, and phone number.</p>
           <label for="name">Name<span>*</span></label>
           <input type="text" id="name" placeholder="e.g. Stephen King" required>
+          <label for="nameError" id="nameError"></label>
           <label for="email">Email Address<span>*</span></label>
           <input type="email" id="email" placeholder="e.g. stephenking@lorem.com" required>
+          <label for="nameError" id="emailError"></label>
           <label for="phone">Phone Number<span>*</span></label>
-          <input type="tel" id="phone" placeholder="e.g. +1 234 567 890" required>
-      </div>
-    </form>
-    
-  </div> <!-- img bg -->
-  
-  
-  
-  
-  
-  
-  
-  
-</div> <!--  container -->
-    <div class="button-form">
-      <a class="go-back">GO BACK</a>
-      <button class="next">NEXT STEP</button>
-    </div>
+          <input type="number" id="phone" placeholder="e.g. +1 234 567 890" required>
+          <label for="nameError" id="phoneError"></label>
+        </div>
+      </form>
+
+    </div> <!-- img bg -->
+
+
+
+
+
+
+
+
+  </div> <!--  container -->
+  <div class="button-form">
+    <button class="go-back">GO BACK</button>
+    <button class="next">NEXT STEP</button>
+  </div>
 
 
 
@@ -127,9 +140,9 @@
 
   <!-- Step 1 start -->
 
-  
- 
-<!-- 
+
+
+  <!-- 
   Name
   
 
@@ -210,10 +223,13 @@
   to email us at support@loremgaming.com. -->
 
   <!-- Step 5 end -->
-  
+
   <div class="attribution">
-    Challenge by <a href="h" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="h" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Clarkky</a>.
   </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
