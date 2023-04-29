@@ -14,6 +14,10 @@ const stepNumber = document.querySelectorAll('.step-number');
 const stepOne = document.getElementById('step-1');
 const stepTwo = document.getElementById('step-2');
 const formStep = form.querySelectorAll('.form-step');
+const one = document.getElementById('num1');
+const two = document.getElementById('num2');
+const three = document.getElementById('num3');
+const four = document.getElementById('num4');
 
 let currentStep = 0;
 
@@ -103,6 +107,21 @@ function nextStep() {
   formStep[currentStep].classList.add('active');
   back.style.visibility = 'visible';
 
+  if (currentStep === 0) {
+    back.style.visibility = 'hidden'; // Hide the button if on the first step
+  }else if(currentStep === 1){
+    one.classList.remove('active-num')
+    two.classList.add('active-num')
+  }else if(currentStep === 2){
+    two.classList.remove('active-num')
+    three.classList.add('active-num')
+  }else if(currentStep === 3){
+    three.classList.remove('active-num')
+    four.classList.add('active-num')
+  } else{
+    back.style.visibility = 'visible'; // Show the button if not on the first step
+  }
+
 }
 
 function prevStep() {
@@ -110,23 +129,54 @@ function prevStep() {
   currentStep--;
   formStep[currentStep].classList.add('active');
 
+
   if (currentStep === 0) {
     back.style.visibility = 'hidden'; // Hide the button if on the first step
-  } else {
+    one.classList.add('active-num')
+    two.classList.remove('active-num')
+  }else if(currentStep === 1){
+    one.classList.remove('active-num')
+    two.classList.add('active-num')
+  }else if(currentStep === 2){
+    two.classList.remove('active-num')
+    three.classList.add('active-num')
+  }else if(currentStep === 3){
+    three.classList.remove('active-num')
+    four.classList.add('active-num')
+  } else{
     back.style.visibility = 'visible'; // Show the button if not on the first step
   }
+
 }
 
 
 
+// active page number of steps
 
-// avtive number of steps
+// function activePages() {
 
-function activeNumber() {
 
+//   if(currentStep === 0) {
+//     one.classList.add('active-num')
+//   }else if(currentStep === 1){
+//     two.classList.add('active-num')
+//   }else if(currentStep === 2){
+//     three.classList.add('active-num')
+//   }else{
+//     four.classList.add('active-num')
+//   }
+
+// }; //function
+
+// form 
+
+function formSubmit(e){
+  e.preventDefault();
+  
 }
 
 // Event Listeners
+form.addEventListener('submit', formSubmit)
 name.addEventListener('input', nameValidation);
 email.addEventListener('input', emailValidation);
 phone.addEventListener('input', phoneValidation);
