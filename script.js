@@ -18,6 +18,11 @@ const one = document.getElementById('num1');
 const two = document.getElementById('num2');
 const three = document.getElementById('num3');
 const four = document.getElementById('num4');
+const monthly = document.querySelector('.monthly');
+const yearly = document.querySelector('.yearly');
+const yearlyLabel = document.querySelectorAll('.yearly-label');
+const buttonForm = document.querySelector('.button-form');
+
 
 let currentStep = 0;
 
@@ -149,24 +154,38 @@ function prevStep() {
 
 }
 
+// yearly plan
+
+function yearlyPlan(){
+    yearly.style.backgroundColor = 'hsl(206, 85%, 58%)';
+    monthly.style.backgroundColor = 'hsl(206, 79%, 85%)';
+    
+
+    yearlyLabel.forEach(label => {
+      label.textContent  = '2 months free';
+      label.style.fontSize = '.6em';
+      label.style.marginTop = '-.5em';
+      label.style.color = 'green';
+      buttonForm.style.marginTop = '2.5em';
+ 
+    })
+
+}
+
+function monthlyPlan(){
+  yearly.style.backgroundColor = 'hsl(206, 79%, 85%)';
+  monthly.style.backgroundColor = 'hsl(206, 85%, 58%)';
+
+  yearlyLabel.forEach(label => {
+    label.textContent  = '';
+    buttonForm.style.marginTop = '0';
+  })
+
+}
 
 
-// active page number of steps
-
-// function activePages() {
 
 
-//   if(currentStep === 0) {
-//     one.classList.add('active-num')
-//   }else if(currentStep === 1){
-//     two.classList.add('active-num')
-//   }else if(currentStep === 2){
-//     three.classList.add('active-num')
-//   }else{
-//     four.classList.add('active-num')
-//   }
-
-// }; //function
 
 // form 
 
@@ -182,4 +201,6 @@ email.addEventListener('input', emailValidation);
 phone.addEventListener('input', phoneValidation);
 next.addEventListener('click', nextStep);
 back.addEventListener('click', prevStep);
+yearly.addEventListener('click', yearlyPlan);
+monthly.addEventListener('click', monthlyPlan);
 

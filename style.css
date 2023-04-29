@@ -112,10 +112,10 @@ input{
     width: 2.5em;
     height: 2.5em;
     border-radius: 50%;
-    border: 1px solid hsl(205, 20%, 24%);
+    border: 1px solid hsl(206, 94%, 87%);
     text-align: center;
     line-height: 2.5em;
-    color: hsl(212, 42%, 23%);
+    color: hsl(206, 94%, 87%);
 
 }
 
@@ -220,13 +220,15 @@ ul{
     padding: .4em .5em;
     background-color: hsl(206, 85%, 58%);
     border-radius: 10px;
+    letter-spacing: 1px;
     
   }
   .yearly {
     margin: .2em .2em;
     padding: .4em .5em;
-    background-color: hsl(206, 85%, 58%);
+    background-color:  hsl(206, 79%, 85%);
     border-radius: 10px;
+    letter-spacing: 1px;
   }
   
 
