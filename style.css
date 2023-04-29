@@ -1,5 +1,5 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@400;500;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@400;500;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 *{
@@ -9,7 +9,7 @@
 }
 body{
     background-color: hsl(229, 24%, 87%);
-    font-family: 'Fraunces', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .phone-state{
@@ -132,10 +132,96 @@ input::placeholder {
 /* active state on step number */
 
 .active-num {
-    background-color: hsl(212, 42%, 23%);
+    background-color: hsl(206, 94%, 87%);
+    color: hsl(212, 42%, 23%);
+    border-color: hsl(206, 94%, 87%);
+}
+
+/* to show and hide in each step */
+
+.active {
+    display: none;
+}
+
+/* step 2 monthly */
+#step-2 h2{
+    margin-bottom: .5em;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+#step-2 p{
+    margin-bottom: .5em;
+    color: hsl(240, 1%, 55%) ;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    font-size: .8em;
+}
+
+.product{
+    border: 1px solid hsl(227, 12%, 86%);
+    margin-bottom: .8em;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0;
+    
+}
+
+ul{
+    list-style: none;
+}
+
+.icon{
+    margin: .7em .3em .5em 1em;
+
+}
+
+.name-choices{
+    margin: .7em .3em .5em .5em;
+    align-items: center;
+
+}
+
+.name-choices h3{
+    font-size: .8em;
+    letter-spacing: 1px;
+    font-weight: 700;
+
 }
 
 
 
+/* switcher */
+#switch-Container {
+    display: flex;
+    justify-content: center;
+    
+    
+  }
+  
+  .switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    background-color: hsl(206, 43%, 90%);
+    padding: .3em ;
+    border-radius: 10px;
+  }
+
+  .monthly{
+    margin: .2em .2em;
+    padding: .4em .5em;
+    background-color: hsl(206, 85%, 58%);
+    border-radius: 10px;
+    
+  }
+  .yearly {
+    margin: .2em .2em;
+    padding: .4em .5em;
+    background-color: hsl(206, 85%, 58%);
+    border-radius: 10px;
+  }
+  
 
 
