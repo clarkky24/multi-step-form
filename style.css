@@ -50,8 +50,8 @@ body{
 }
 label{
     display: block;
-    font-size: 1em;
-    font-weight: 500;
+    font-size: .8em;
+    font-weight: 600;
     margin-bottom: .3em;
     letter-spacing: 1px;
 }
@@ -92,6 +92,7 @@ input{
     letter-spacing: 1px;
     font-size: .7em;
     margin-left: 1em;
+    visibility: hidden;
 }
 
 /* STEP NUMBER */
@@ -107,14 +108,14 @@ input{
 }
 .step-number{
     display: inline-block;
-    font-weight: 500;
+    font-weight: 700;
     width: 2.5em;
     height: 2.5em;
     border-radius: 50%;
-    border: 1px solid hsl(212, 42%, 23%);
+    border: 1px solid hsl(205, 20%, 24%);
     text-align: center;
     line-height: 2.5em;
-    color: hsl(240, 15%, 91%);
+    color: hsl(212, 42%, 23%);
 
 }
 
@@ -139,9 +140,14 @@ input::placeholder {
 
 /* to show and hide in each step */
 
-.active {
+.form-step{
     display: none;
-}
+  }
+.form-step.active{
+    display: block;
+  }
+
+
 
 /* step 2 monthly */
 #step-2 h2{
@@ -223,5 +229,9 @@ ul{
     border-radius: 10px;
   }
   
+
+  /* form step in DOM */
+
+ 
 
 
