@@ -22,6 +22,19 @@ const monthly = document.querySelector('.monthly');
 const yearly = document.querySelector('.yearly');
 const yearlyLabel = document.querySelectorAll('.yearly-label');
 const buttonForm = document.querySelector('.button-form');
+const arcadeYearlyP = document.querySelector('.annual-p-arcade');  
+const advancedYearlyP = document.querySelector('.annual-p-advanced');
+const proYearlyP = document.querySelector('.annual-p-pro');
+const arcadeMonthlyP = document.querySelector('.monthly-p-arcade');  
+const advancedMonthlyP = document.querySelector('.monthly-p-advanced');
+const proMonthlyP = document.querySelector('.monthly-p-pro');
+const arcade = document.querySelector('.product-arcade');
+const advanced = document.querySelector('.product-advanced');
+const pro = document.querySelector('.product-pro');
+const product = document.querySelector('.product');
+const arcadeStyle = document.querySelector('#arcade');
+const advancedStyle = document.querySelector('#advanced');
+const proStyle = document.querySelector('#pro');
 
 
 let currentStep = 0;
@@ -154,38 +167,139 @@ function prevStep() {
 
 }
 
-// yearly plan
+// yearly plan option
 
-function yearlyPlan(){
-    yearly.style.backgroundColor = 'hsl(206, 85%, 58%)';
-    monthly.style.backgroundColor = 'hsl(206, 79%, 85%)';
-    
+// function yearlyPlan(){
 
-    yearlyLabel.forEach(label => {
-      label.textContent  = '2 months free';
-      label.style.fontSize = '.6em';
-      label.style.marginTop = '-.5em';
-      label.style.color = 'green';
-      buttonForm.style.marginTop = '2.5em';
+//     yearly.style.backgroundColor = 'hsl(206, 85%, 58%)';
+//     monthly.style.backgroundColor = 'hsl(206, 79%, 85%)';
+//     arcadeMonthlyP.style.display = 'none';
+//     advancedMonthlyP.style.display = 'none';
+//     proMonthlyP.style.display = 'none';
+//     arcadeYearlyP.style.display = 'block';
+//     advancedYearlyP.style.display = 'block';
+//     proYearlyP.style.display = 'block';
+
+//     yearlyLabel.forEach(label => {
+//       label.textContent  = '2 months free';
+//       label.style.fontSize = '.6em';
+//       label.style.marginTop = '-.5em';
+//       label.style.color = 'green';
+//       buttonForm.style.marginTop = '2.5em';
  
-    })
+//     });
 
-}
+// };
 
-function monthlyPlan(){
+// //monthly plan option
+
+// function monthlyPlan(){
+
+//   yearly.style.backgroundColor = 'hsl(206, 79%, 85%)';
+//   monthly.style.backgroundColor = 'hsl(206, 85%, 58%)';
+//   const monthlyValue = 'monthly'; 
+//   arcadeYearlyP.style.display = 'none';
+//   advancedYearlyP.style.display = 'none';
+//   proYearlyP.style.display = 'none';
+//   arcadeMonthlyP.style.display = 'block';
+//   advancedMonthlyP.style.display = 'block';
+//   proMonthlyP.style.display = 'block';
+
+
+//   yearlyLabel.forEach(label => {
+//     label.textContent  = '';
+//     buttonForm.style.marginTop = '0';
+//   });
+
+// };
+// monthly plan option
+function monthlyPlan() {
   yearly.style.backgroundColor = 'hsl(206, 79%, 85%)';
   monthly.style.backgroundColor = 'hsl(206, 85%, 58%)';
+  const selectedPlan = 'monthly';
+  
+  // Get the value of the selected plan for each product
+  document.querySelectorAll('.product').forEach(product => {
+    const frequency = product.getAttribute('data-frequency');
+    const value = product.getAttribute('data-value');
+    if (frequency === selectedPlan) {
+      const productID = product.getAttribute('id');
+      console.log(`Product ID: ${productID}, Value: ${value}, Plan: ${selectedPlan}`);
+    }
+  });
+  form.style.top ='-3%'
+  arcadeYearlyP.style.display = 'none';
+  advancedYearlyP.style.display = 'none';
+  proYearlyP.style.display = 'none';
+  arcadeMonthlyP.style.display = 'block';
+  advancedMonthlyP.style.display = 'block';
+  proMonthlyP.style.display = 'block';
 
   yearlyLabel.forEach(label => {
     label.textContent  = '';
     buttonForm.style.marginTop = '0';
-  })
+  });
+};
 
+// yearly plan option
+function yearlyPlan() {
+  yearly.style.backgroundColor = 'hsl(206, 85%, 58%)';
+  monthly.style.backgroundColor = 'hsl(206, 79%, 85%)';
+  const selectedPlan = 'yearly';
+
+  // Get the value of the selected plan for each product
+  document.querySelectorAll('.product').forEach(product => {
+    const frequency = product.getAttribute('data-frequency');
+    const value = product.getAttribute('data-value');
+    if (frequency === selectedPlan) {
+      const productID = product.getAttribute('id');
+      console.log(`Product ID: ${productID}, Value: ${value}, Plan: ${selectedPlan}`);
+    }
+  });
+
+  form.style.top ='-4.5%'
+  arcadeMonthlyP.style.display = 'none';
+  advancedMonthlyP.style.display = 'none';
+  proMonthlyP.style.display = 'none';
+  arcadeYearlyP.style.display = 'block';
+  advancedYearlyP.style.display = 'block';
+  proYearlyP.style.display = 'block';
+
+  yearlyLabel.forEach(label => {
+    label.textContent  = '2 months free';
+    label.style.fontSize = '.6em';
+    label.style.marginTop = '-.5em';
+    label.style.color = 'green';
+    buttonForm.style.marginTop = '2.5em';
+  });
+};
+
+
+
+//arcade plan
+
+function arcadePlan(){
+  arcadeStyle.style.borderColor = 'hsl(243, 100%, 62%)';
+  advancedStyle.style.borderColor = 'hsl(227, 12%, 86%)';
+  proStyle.style.borderColor = 'hsl(227, 12%, 86%)';
 }
 
+// advanced plan
+function advancedPlan(){
+  arcadeStyle.style.borderColor = 'hsl(227, 12%, 86%)';
+  advancedStyle.style.borderColor = 'hsl(243, 100%, 62%)';
+  proStyle.style.borderColor = 'hsl(227, 12%, 86%)';
+  }
 
-
-
+// pro plan
+  function proPlan(){
+    arcadeStyle.style.borderColor = 'hsl(227, 12%, 86%)';
+    advancedStyle.style.borderColor = 'hsl(227, 12%, 86%)';
+    proStyle.style.borderColor = 'hsl(243, 100%, 62%)';
+    }
+    arcade.addEventListener('click', arcadePlan);
+advanced.addEventListener('click', advancedPlan);
+pro.addEventListener('click', proPlan);
 
 // form 
 
@@ -203,4 +317,8 @@ next.addEventListener('click', nextStep);
 back.addEventListener('click', prevStep);
 yearly.addEventListener('click', yearlyPlan);
 monthly.addEventListener('click', monthlyPlan);
+arcade.addEventListener('click', arcadePlan);
+advanced.addEventListener('click', advancedPlan);
+pro.addEventListener('click', proPlan);
+
 

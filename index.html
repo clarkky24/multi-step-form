@@ -102,72 +102,90 @@
                            <!--Switch monthly to yearly-->
 
         <div id="switch-Container">
-          <div class="switch">
-              <div class="monthly"><h5>Monthly</h5></div>
-              <div class="yearly"><h5>Annually</h5></div>
-          </div>
+        <div class="switch">
+            <div class="monthly" data-frequency="monthly"><h5>Monthly</h5></div>
+            <div class="yearly" data-frequency="yearly"><h5>Annually</h5></div>
         </div>
-          
+      </div>
+        
+      
 
 
+        <ul class="product-list">
 
-          <ul class="product-list">
-
-                <!-- arcade product -->
-                <li>
-                  <div class="product">
-                    <div class="icon"><img src="./assets/images/icon-arcade.svg" alt="">
+              <!-- arcade product -->
+              <li class="product product-arcade" data-frequency="monthly" data-value="9" id="arcade">
+                
+                  <div class="icon"><img src="./assets/images/icon-arcade.svg" alt="">
+                  </div>
+                  <div class="name-choices">
+                    <div>
+                      <h3>Arcade</h3>
                     </div>
+                    <div>
+                      <p class="monthly-p-arcade">$9/mo</p>
+                      <p class="annual-p-arcade">$90/year</p>
+                  </div>
+                    <label class="yearly-label"></label>
+                  </div>
+                
+              </li>
+
+                <!-- advance product -->
+                <li  class="product product-advanced" data-frequency="monthly" data-value="12" id="advanced">
+                  
+                    <div class="icon"><img src="./assets/images/icon-advanced.svg" alt=""></div>
                     <div class="name-choices">
                       <div>
-                        <h3>Arcade</h3>
+                        <h3>Advanced</h3>
                       </div>
                       <div>
-                        <p>$9/mo</p>
+                        <p class="monthly-p-advanced">$12/mo</p>
+                        <p class="annual-p-advanced">$120/year</p>
+                    </div>
+                      <label class="yearly-label"></label>
+                    </div>
+
+                </li>
+
+                  <!-- pro product -->
+                <li class="product product-pro" data-frequency="monthly" data-value="15" id="pro">
+                 
+                    <div class="icon"><img src="./assets/images/icon-pro.svg" alt=""></div>
+                    <div class="name-choices">
+                      <div>
+                        <h3>Pro</h3>
                       </div>
+                      <div>
+                        <p class="monthly-p-pro">$15/mo</p>
+                        <p class="annual-p-pro">$150/year</p>
+                    </div>
                       <label class="yearly-label"></label>
                     </div>
                   </div>
                 </li>
 
-                  <!-- advance product -->
-                  <li>
-                    <div class="product">
-
-                      <div class="icon"><img src="./assets/images/icon-advanced.svg" alt=""></div>
-                      <div class="name-choices">
-                        <div>
-                          <h3>Advanced</h3>
-                        </div>
-                        <div>
-                          <p>$12/mo</p>
-                        </div>
-                        <label class="yearly-label"></label>
-                      </div>
-
-                    </div>
-                  </li>
-
-                    <!-- pro product -->
-                  <li>
-                    <div class="product">
-                      <div class="icon"><img src="./assets/images/icon-pro.svg" alt=""></div>
-                      <div class="name-choices">
-                        <div>
-                          <h3>Pro</h3>
-                        </div>
-                        <div>
-                          <p>$15/mo</p>
-                        </div>
-                        <label class="yearly-label"></label>
-                      </div>
-                    </div>
-                  </li>
+              </ul>
+      </div><!--   step 2 close -->
 
 
-
+        <div class="form-step" id="step-3">
+          <h2>Pick add-ons</h2>
+          <p>Add-ons help enhance your gaming experience.</p>
+          <ul class="Add-ons">
+       
+              <li>
+                <input type="checkbox" name="item1" value="Item 1" class="addOns"> Item 1
+              </li>
+              <li><input type="checkbox" name="item2" value="Item 2"> Item 2</li>
+              <li><input type="checkbox" name="item3" value="Item 3"> Item 3</li>
+             
           </ul>
-          </div><!--   step 2 close -->
+
+
+
+        </div> <!--step3 close-->
+                          
       </form>
 
     </div> <!-- img bg -->
@@ -258,8 +276,8 @@
 
   <!-- Step 3 start -->
 
-  <!-- Pick add-ons
-  Add-ons help enhance your gaming experience. -->
+  <!-- 
+   -->
 
   <!-- Online service
   Access to multiplayer games
