@@ -174,6 +174,20 @@ input::placeholder {
     font-size: .8em;
 }
 
+#step-3 h2 {
+    margin-bottom: .5em;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+
+#step-3 p {
+    margin-bottom: 2em;
+    color: hsl(240, 1%, 55%);
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    font-size: .8em;
+}
+
 .product {
     border: 1px solid hsl(227, 12%, 86%);
     margin-bottom: .8em;
@@ -245,9 +259,7 @@ ul {
 }
 
 
-.selected{
-    border-color: hsl(243, 100%, 62%);
-}
+
 .annual-p-pro{
     display: none;
 }
@@ -258,3 +270,53 @@ ul {
     display: none;
 }
 /* form step in DOM */
+
+/* Hide the default checkbox */
+input[type="checkbox"] {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+  }
+  
+  input[type="checkbox"]:checked {
+    background-color: #2196F3;
+    border-color: #2196F3;
+  }
+
+  .step3List{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid hsl(227, 12%, 86%);
+    padding: 1.5em .5em 0 .5em;
+    margin-bottom: 1em;
+  }
+
+  
+  .addOns-product{
+    font-size: .8em;
+    
+  }
+
+  .addOns-product h5{
+    font-size: .9em;
+    letter-spacing: 1px;
+  }
+
+  
+  #step-3 .addOns-product p{
+    font-size: .8em;
+    letter-spacing: 1px;
+  }
+
+  #step-3 .price p{
+    color: hsl(243, 100%, 62%);
+  }

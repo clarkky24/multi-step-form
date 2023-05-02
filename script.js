@@ -1,4 +1,4 @@
-// Constants
+//Constants
 const form = document.getElementById('form');
 const firstStep = document.getElementById('step-1');
 const name = document.getElementById('name');
@@ -150,14 +150,16 @@ function prevStep() {
 
   if (currentStep === 0) {
     back.style.visibility = 'hidden'; // Hide the button if on the first step
-    one.classList.add('active-num')
-    two.classList.remove('active-num')
+    one.classList.add('active-num');
+    two.classList.remove('active-num');
   }else if(currentStep === 1){
-    one.classList.remove('active-num')
-    two.classList.add('active-num')
+    one.classList.remove('active-num');
+    two.classList.add('active-num');
+    three.classList.remove('active-num');
   }else if(currentStep === 2){
-    two.classList.remove('active-num')
-    three.classList.add('active-num')
+    two.classList.remove('active-num');
+    three.classList.add('active-num');
+    four.classList.remove('active-num')
   }else if(currentStep === 3){
     three.classList.remove('active-num')
     four.classList.add('active-num')
@@ -167,51 +169,7 @@ function prevStep() {
 
 }
 
-// yearly plan option
 
-// function yearlyPlan(){
-
-//     yearly.style.backgroundColor = 'hsl(206, 85%, 58%)';
-//     monthly.style.backgroundColor = 'hsl(206, 79%, 85%)';
-//     arcadeMonthlyP.style.display = 'none';
-//     advancedMonthlyP.style.display = 'none';
-//     proMonthlyP.style.display = 'none';
-//     arcadeYearlyP.style.display = 'block';
-//     advancedYearlyP.style.display = 'block';
-//     proYearlyP.style.display = 'block';
-
-//     yearlyLabel.forEach(label => {
-//       label.textContent  = '2 months free';
-//       label.style.fontSize = '.6em';
-//       label.style.marginTop = '-.5em';
-//       label.style.color = 'green';
-//       buttonForm.style.marginTop = '2.5em';
- 
-//     });
-
-// };
-
-// //monthly plan option
-
-// function monthlyPlan(){
-
-//   yearly.style.backgroundColor = 'hsl(206, 79%, 85%)';
-//   monthly.style.backgroundColor = 'hsl(206, 85%, 58%)';
-//   const monthlyValue = 'monthly'; 
-//   arcadeYearlyP.style.display = 'none';
-//   advancedYearlyP.style.display = 'none';
-//   proYearlyP.style.display = 'none';
-//   arcadeMonthlyP.style.display = 'block';
-//   advancedMonthlyP.style.display = 'block';
-//   proMonthlyP.style.display = 'block';
-
-
-//   yearlyLabel.forEach(label => {
-//     label.textContent  = '';
-//     buttonForm.style.marginTop = '0';
-//   });
-
-// };
 // monthly plan option
 function monthlyPlan() {
   yearly.style.backgroundColor = 'hsl(206, 79%, 85%)';
@@ -320,5 +278,3 @@ monthly.addEventListener('click', monthlyPlan);
 arcade.addEventListener('click', arcadePlan);
 advanced.addEventListener('click', advancedPlan);
 pro.addEventListener('click', proPlan);
-
-

@@ -79,116 +79,155 @@
 
       <form id="form" class="form-container">
 
-        <div class="form-step active" id="step-1">
-          <h2>Personal Info</h2>
-          <p>Please provide your name, email address, and phone number.</p>
-          <label for="name">Name<span>*</span></label>
-          <input type="text" id="name" placeholder="e.g. Stephen King" required>
-          <label for="nameError" id="nameError"></label>
-          <label for="email">Email Address<span>*</span></label>
-          <input type="email" id="email" placeholder="e.g. stephenking@lorem.com" required>
-          <label for="nameError" id="emailError"></label>
-          <label for="phone">Phone Number<span>*</span></label>
-          <input type="number" id="phone" placeholder="e.g. +1 234 567 890" required>
-          <label for="nameError" id="phoneError"></label>
-        </div>
+            <div class="form-step active" id="step-1">
+              <h2>Personal Info</h2>
+              <p>Please provide your name, email address, and phone number.</p>
+              <label for="name">Name<span>*</span></label>
+              <input type="text" id="name" placeholder="e.g. Stephen King" required>
+              <label for="nameError" id="nameError"></label>
+              <label for="email">Email Address<span>*</span></label>
+              <input type="email" id="email" placeholder="e.g. stephenking@lorem.com" required>
+              <label for="nameError" id="emailError"></label>
+              <label for="phone">Phone Number<span>*</span></label>
+              <input type="number" id="phone" placeholder="e.g. +1 234 567 890" required>
+              <label for="nameError" id="phoneError"></label>
+            </div>
 
-        <!-- step 2 -->
+            <!-- step 2 -->
 
-        <div class="form-step month-switch" id="step-2">
-            <h2>Select your plan</h2>
-            <p>You have the option of monthly or yearly billing.</p>
+            <div class="form-step month-switch" id="step-2">
+                <h2>Select your plan</h2>
+                <p>You have the option of monthly or yearly billing.</p>
 
-                           <!--Switch monthly to yearly-->
+                              <!--Switch monthly to yearly-->
 
-        <div id="switch-Container">
-        <div class="switch">
-            <div class="monthly" data-frequency="monthly"><h5>Monthly</h5></div>
-            <div class="yearly" data-frequency="yearly"><h5>Annually</h5></div>
-        </div>
-      </div>
-        
-      
+            <div id="switch-Container">
+            <div class="switch">
+                <div class="monthly" data-frequency="monthly"><h5>Monthly</h5></div>
+                <div class="yearly" data-frequency="yearly"><h5>Annually</h5></div>
+            </div>
+          </div>
+            
+          
 
 
-        <ul class="product-list">
+            <ul class="product-list">
 
-              <!-- arcade product -->
-              <li class="product product-arcade" data-frequency="monthly" data-value="9" id="arcade">
-                
-                  <div class="icon"><img src="./assets/images/icon-arcade.svg" alt="">
-                  </div>
-                  <div class="name-choices">
-                    <div>
-                      <h3>Arcade</h3>
-                    </div>
-                    <div>
-                      <p class="monthly-p-arcade">$9/mo</p>
-                      <p class="annual-p-arcade">$90/year</p>
-                  </div>
-                    <label class="yearly-label"></label>
-                  </div>
-                
-              </li>
+                  <!-- arcade product -->
+                  <li class="product product-arcade" data-frequency="monthly" data-value="9" id="arcade">
+                    
+                      <div class="icon"><img src="./assets/images/icon-arcade.svg" alt="">
+                      </div>
+                      <div class="name-choices">
+                        <div>
+                          <h3>Arcade</h3>
+                        </div>
+                        <div>
+                          <p class="monthly-p-arcade">$9/mo</p>
+                          <p class="annual-p-arcade">$90/year</p>
+                      </div>
+                        <label class="yearly-label"></label>
+                      </div>
+                    
+                  </li>
 
-                <!-- advance product -->
-                <li  class="product product-advanced" data-frequency="monthly" data-value="12" id="advanced">
+                    <!-- advance product -->
+                    <li  class="product product-advanced" data-frequency="monthly" data-value="12" id="advanced">
+                      
+                        <div class="icon"><img src="./assets/images/icon-advanced.svg" alt=""></div>
+                        <div class="name-choices">
+                          <div>
+                            <h3>Advanced</h3>
+                          </div>
+                          <div>
+                            <p class="monthly-p-advanced">$12/mo</p>
+                            <p class="annual-p-advanced">$120/year</p>
+                        </div>
+                          <label class="yearly-label"></label>
+                        </div>
+
+                    </li>
+
+                      <!-- pro product -->
+                    <li class="product product-pro" data-frequency="monthly" data-value="15" id="pro">
+                    
+                        <div class="icon"><img src="./assets/images/icon-pro.svg" alt=""></div>
+                        <div class="name-choices">
+                          <div>
+                            <h3>Pro</h3>
+                          </div>
+                          <div>
+                            <p class="monthly-p-pro">$15/mo</p>
+                            <p class="annual-p-pro">$150/year</p>
+                          </div>
+                          <label class="yearly-label"></label>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
                   
-                    <div class="icon"><img src="./assets/images/icon-advanced.svg" alt=""></div>
-                    <div class="name-choices">
-                      <div>
-                        <h3>Advanced</h3>
-                      </div>
-                      <div>
-                        <p class="monthly-p-advanced">$12/mo</p>
-                        <p class="annual-p-advanced">$120/year</p>
-                    </div>
-                      <label class="yearly-label"></label>
-                    </div>
-
-                </li>
-
-                  <!-- pro product -->
-                <li class="product product-pro" data-frequency="monthly" data-value="15" id="pro">
-                 
-                    <div class="icon"><img src="./assets/images/icon-pro.svg" alt=""></div>
-                    <div class="name-choices">
-                      <div>
-                        <h3>Pro</h3>
-                      </div>
-                      <div>
-                        <p class="monthly-p-pro">$15/mo</p>
-                        <p class="annual-p-pro">$150/year</p>
-                    </div>
-                      <label class="yearly-label"></label>
-                    </div>
+                  <div class="form-step " id="step-3">
+                    <h2>Pick add-ons</h2>
+                    <p>Add-ons help enhance your gaming experience.</p>
+                    <ul class="addOns">
+                      <li class="step3List">
+                        <input type="checkbox" name="item1" value="onlineService" id="checkbox">
+                        <div class="addOns-product">
+                          <h5>Online Service</h5>
+                          <p>Access to multiplayer games</p>
+                        </div>
+                        <div class="price">
+                          <p>+$1/mo</p>
+                        </div>
+                      </li>
+                      <li class="step3List">
+                        <input type="checkbox" name="item2" value="storage" id="checkbox">
+                        <div class="addOns-product">
+                          <h5>Larger Storage</h5>
+                          <p class="addOns-product" >Extra 1TB of cloud save</p>
+                        </div>
+                        <div class="price">
+                          <p>+$2/mo</p>
+                        </div>
+                      </li>
+                      <li class="step3List">
+                        <input type="checkbox" name="item3" value="customize" id="checkbox">
+                        <div class="addOns-product">
+                          <h5>Customizable Profile</h5>
+                          <p>Custom theme on your profile</p>
+                        </div>
+                        <div class="price">
+                          <p>+$2/mo</p>
+                        </div>
+                      </li>
+                     
+                    </ul>
+                    
                   </div>
-                </li>
-
-              </ul>
-      </div><!--   step 2 close -->
 
 
-        <div class="form-step" id="step-3">
-          <h2>Pick add-ons</h2>
-          <p>Add-ons help enhance your gaming experience.</p>
-          <ul class="Add-ons">
-       
-              <li>
-                <input type="checkbox" name="item1" value="Item 1" class="addOns"> Item 1
-              </li>
-              <li><input type="checkbox" name="item2" value="Item 2"> Item 2</li>
-              <li><input type="checkbox" name="item3" value="Item 3"> Item 3</li>
-             
-          </ul>
+            
 
-
-
-        </div> <!--step3 close-->
+          <div class="form-step " id="step-4">
+            <h2>Personal Info</h2>
+            <p>Please provide your name, email address, and phone number.</p>
+            <label for="name">Name<span>*</span></label>
+            <input type="text" id="name" placeholder="e.g. Stephen King" required>
+            <label for="nameError" id="nameError"></label>
+            <label for="email">Email Address<span>*</span></label>
+            <input type="email" id="email" placeholder="e.g. stephenking@lorem.com" required>
+            <label for="nameError" id="emailError"></label>
+            <label for="phone">Phone Number<span>*</span></label>
+            <input type="number" id="phone" placeholder="e.g. +1 234 567 890" required>
+            <label for="nameError" id="phoneError"></label>
+          </div>
                           
-      </form>
+          </form> <!--FORM close-->
+        </div> <!--   bg close -->
+     
+      </div> <!-- container -->
 
-    </div> <!-- img bg -->
 
 
 
@@ -197,7 +236,7 @@
     
     
     
-  </div> <!--  container -->
+ 
   <div class="button-form">
     <button class="go-back" >GO BACK</button>
     <button class="next" >NEXT STEP</button>
@@ -254,46 +293,7 @@
 
   <!-- Step 2 start -->
 
-  <!-- Select your plan
-  You have the option of monthly or yearly billing.
-
-  Arcade
-  $9/mo
-
-  Advanced
-  $12/mo
-
-  Pro
-  $15/mo
-
-  Monthly
-  Yearly
-
-  Go Back
-  Next Step -->
-
-  <!-- Step 2 end -->
-
-  <!-- Step 3 start -->
-
   <!-- 
-   -->
-
-  <!-- Online service
-  Access to multiplayer games
-  +$1/mo
-
-  Larger storage
-  Extra 1TB of cloud save
-  +$2/mo
-
-  Customizable Profile
-  Custom theme on your profile
-  +$2/mo
-
-  Go Back
-  Next Step -->
-
   <!-- Step 3 end -->
 
   <!-- Step 4 start -->
