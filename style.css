@@ -188,6 +188,8 @@ input::placeholder {
     font-size: .8em;
 }
 
+
+
 .product {
     border: 1px solid hsl(227, 12%, 86%);
     margin-bottom: .8em;
@@ -247,6 +249,7 @@ ul {
     background-color: hsl(206, 75%, 60%);
     border-radius: 50px;
     letter-spacing: 1px;
+    
 
 }
 
@@ -320,3 +323,83 @@ input[type="checkbox"] {
   #step-3 .price p{
     color: hsl(243, 100%, 62%);
   }
+
+  #step-4 h2 {
+    margin-bottom: .5em;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+
+#step-4 p {
+    margin-bottom: 2em;
+    color: hsl(240, 1%, 55%);
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    font-size: .9em;
+}
+.yearly-addOns{
+    display: none;
+}
+
+#choosen-plan{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-top: 1em;
+    margin-bottom: -1.5em;
+}
+#choosen-plan p{
+    color: (243, 100%, 62%) ;
+}
+.change-button{
+    margin: -1.2em 0;
+    text-decoration: underline;
+    color: #262a2d;
+}
+
+.addOns-plan {
+    display: flex;
+    justify-content: space-between;
+    font-size: .9em;
+    margin: 1em .5em -1.5em .5em;
+}
+
+.total-cost-container {
+    background-color: #e0ebf4;
+    padding: .5em;
+    border-radius: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.total{
+    margin-right: 1.5em;
+    padding-bottom: 1em;
+}
+
+.thankyou-container{   
+    text-align: center;
+    margin: 3.5em 1em;
+}
+.img-heart{
+    margin-bottom: 1em;
+}
+.thank{
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.message{
+    letter-spacing: 1px;
+    
+}
+a{
+    color: #262a2d;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+/* animation */

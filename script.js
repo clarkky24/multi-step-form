@@ -134,9 +134,17 @@ function nextStep() {
     two.classList.remove('active-num')
     three.classList.add('active-num')
   }else if(currentStep === 3){
+    next.textContent = 'CONFIRM';
+    next.style.letterSpacing = '1px';
+    next.style.padding  = '1em';
+    next.style.fontSize = '.7em';
     three.classList.remove('active-num')
     four.classList.add('active-num')
-  } else{
+  } else if(currentStep === 4){
+    next.style.display = 'none';
+    back.style.display = 'none';
+    
+  }else{
     back.style.visibility = 'visible'; // Show the button if not on the first step
   }
 
@@ -160,6 +168,7 @@ function prevStep() {
     two.classList.remove('active-num');
     three.classList.add('active-num');
     four.classList.remove('active-num')
+    next.textContent = 'NEXT STEP';
   }else if(currentStep === 3){
     three.classList.remove('active-num')
     four.classList.add('active-num')
@@ -255,10 +264,7 @@ function advancedPlan(){
     advancedStyle.style.borderColor = 'hsl(227, 12%, 86%)';
     proStyle.style.borderColor = 'hsl(243, 100%, 62%)';
     }
-    arcade.addEventListener('click', arcadePlan);
-advanced.addEventListener('click', advancedPlan);
-pro.addEventListener('click', proPlan);
-
+    
 // form 
 
 function formSubmit(e){
@@ -278,3 +284,7 @@ monthly.addEventListener('click', monthlyPlan);
 arcade.addEventListener('click', arcadePlan);
 advanced.addEventListener('click', advancedPlan);
 pro.addEventListener('click', proPlan);
+arcade.addEventListener('click', arcadePlan);
+advanced.addEventListener('click', advancedPlan);
+pro.addEventListener('click', proPlan);
+
