@@ -31,6 +31,7 @@ body {
     border-radius: 10px;
     top: -3%;
     transform: translate(0%, 25%);
+    transition: background-color 1s cubic-bezier(0.48, 1.1, 0.53, 1);
 }
 
 .phone-step {
@@ -145,12 +146,14 @@ input::placeholder {
     background-color: hsl(206, 94%, 87%);
     color: hsl(212, 42%, 23%);
     border-color: hsl(206, 94%, 87%);
+    transition: background-color 1s cubic-bezier(0.48, 1.1, 0.53, 1);
 }
 
 /* to show and hide in each step */
 
 .form-step {
     display: none;
+    
 }
 
 .form-step.active {
@@ -249,7 +252,7 @@ ul {
     background-color: hsl(206, 75%, 60%);
     border-radius: 50px;
     letter-spacing: 1px;
-    
+    transition: background-color .5s cubic-bezier(0.48, 1.1, 0.53, 1);
 
 }
 
@@ -259,6 +262,7 @@ ul {
     background-color: hsl(206, 79%, 85%);
     border-radius: 50px;
     letter-spacing: 1px;
+    transition: background-color .5s cubic-bezier(0.48, 1.1, 0.53, 1);
 }
 
 
@@ -403,3 +407,7 @@ a{
 }
 
 /* animation */
+.subs{
+
+    display: flex;
+}

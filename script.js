@@ -31,10 +31,14 @@ const proMonthlyP = document.querySelector('.monthly-p-pro');
 const arcade = document.querySelector('.product-arcade');
 const advanced = document.querySelector('.product-advanced');
 const pro = document.querySelector('.product-pro');
-const product = document.querySelector('.product');
+const product = document.querySelectorAll('.product');
 const arcadeStyle = document.querySelector('#arcade');
 const advancedStyle = document.querySelector('#advanced');
 const proStyle = document.querySelector('#pro');
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+const plan = document.querySelector('.plan-type');
+const spanTag =  document.querySelector('.sub');
+const planPrice = document.querySelector('.plan-price');
 
 
 let currentStep = 0;
@@ -183,17 +187,16 @@ function prevStep() {
 function monthlyPlan() {
   yearly.style.backgroundColor = 'hsl(206, 79%, 85%)';
   monthly.style.backgroundColor = 'hsl(206, 85%, 58%)';
-  const selectedPlan = 'monthly';
-  
+ 
+
   // Get the value of the selected plan for each product
-  document.querySelectorAll('.product').forEach(product => {
-    const frequency = product.getAttribute('data-frequency');
-    const value = product.getAttribute('data-value');
-    if (frequency === selectedPlan) {
-      const productID = product.getAttribute('id');
-      console.log(`Product ID: ${productID}, Value: ${value}, Plan: ${selectedPlan}`);
-    }
+  product.forEach(product => {
+    product.setAttribute('data-value', '9');
+    arcadeStyle.style.borderColor = 'hsl(227, 12%, 86%)';
+    advancedStyle.style.borderColor = 'hsl(227, 12%, 86%)';
+    proStyle.style.borderColor = 'hsl(227, 12%, 86%)';
   });
+
   form.style.top ='-3%'
   arcadeYearlyP.style.display = 'none';
   advancedYearlyP.style.display = 'none';
@@ -212,16 +215,13 @@ function monthlyPlan() {
 function yearlyPlan() {
   yearly.style.backgroundColor = 'hsl(206, 85%, 58%)';
   monthly.style.backgroundColor = 'hsl(206, 79%, 85%)';
-  const selectedPlan = 'yearly';
 
   // Get the value of the selected plan for each product
-  document.querySelectorAll('.product').forEach(product => {
-    const frequency = product.getAttribute('data-frequency');
-    const value = product.getAttribute('data-value');
-    if (frequency === selectedPlan) {
-      const productID = product.getAttribute('id');
-      console.log(`Product ID: ${productID}, Value: ${value}, Plan: ${selectedPlan}`);
-    }
+  product.forEach(product => {
+    product.setAttribute('data-value', '90');
+    arcadeStyle.style.borderColor = 'hsl(227, 12%, 86%)';
+    advancedStyle.style.borderColor = 'hsl(227, 12%, 86%)';
+    proStyle.style.borderColor = 'hsl(227, 12%, 86%)';
   });
 
   form.style.top ='-4.5%'
@@ -246,6 +246,31 @@ function yearlyPlan() {
 //arcade plan
 
 function arcadePlan(){
+ 
+
+  product.forEach(product => {
+    const data = product.getAttribute('data-value');
+  
+    if(data === '9'){
+      const planType = '(Monthly)';
+      const planName = 'Arcade';
+      plan.textContent = planName;
+      spanTag.textContent = planType;
+      planPrice.textContent = '$9/mo'; 
+      spanTag.style.color = 'green';
+      
+    } else{
+      const yearlyPlan = '(Annually)';
+      const planName = 'Arcade';
+      plan.textContent = planName;
+      spanTag.textContent = yearlyPlan;
+      planPrice.textContent = '$90/yr'; 
+      spanTag.style.color = 'green';
+    } 
+  });
+
+
+
   arcadeStyle.style.borderColor = 'hsl(243, 100%, 62%)';
   advancedStyle.style.borderColor = 'hsl(227, 12%, 86%)';
   proStyle.style.borderColor = 'hsl(227, 12%, 86%)';
@@ -253,6 +278,28 @@ function arcadePlan(){
 
 // advanced plan
 function advancedPlan(){
+
+  product.forEach(product => {
+    const data = product.getAttribute('data-value');
+  
+    if(data === '9'){
+      const planType = '(Monthly)';
+      const planName = 'Advanced';
+      plan.textContent = planName;
+      spanTag.textContent = planType;
+      planPrice.textContent = '$12/mo'; 
+      spanTag.style.color = 'green';
+      
+    } else{
+      const yearlyPlan = '(Annually)';
+      const planName = 'Advanced';
+      plan.textContent = planName;
+      spanTag.textContent = yearlyPlan;
+      planPrice.textContent = '$120/yr'; 
+      spanTag.style.color = 'green';
+    } 
+  });
+
   arcadeStyle.style.borderColor = 'hsl(227, 12%, 86%)';
   advancedStyle.style.borderColor = 'hsl(243, 100%, 62%)';
   proStyle.style.borderColor = 'hsl(227, 12%, 86%)';
@@ -260,6 +307,28 @@ function advancedPlan(){
 
 // pro plan
   function proPlan(){
+    
+
+    product.forEach(product => {
+      const data = product.getAttribute('data-value');
+    if(data === '9'){
+      const planType = '(Monthly)';
+      const planName = 'Pro';
+      plan.textContent = planName;
+      spanTag.textContent = planType;
+      planPrice.textContent = '$15/mo'; 
+      spanTag.style.color = 'green';
+      
+    } else{
+      const yearlyPlan = '(Annually)';
+      const planName = 'Pro';
+      plan.textContent = planName;
+      spanTag.textContent = yearlyPlan;
+      planPrice.textContent = '$150/yr'; 
+      spanTag.style.color = 'green';
+    } 
+  });
+
     arcadeStyle.style.borderColor = 'hsl(227, 12%, 86%)';
     advancedStyle.style.borderColor = 'hsl(227, 12%, 86%)';
     proStyle.style.borderColor = 'hsl(243, 100%, 62%)';
