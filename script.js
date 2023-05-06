@@ -39,8 +39,18 @@ const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const plan = document.querySelector('.plan-type');
 const spanTag =  document.querySelector('.sub');
 const planPrice = document.querySelector('.plan-price');
+const subTotal = document.querySelector('.total');
+const addOnsType1 = document.querySelector('.addOns-type1');
+const addOnsType2 = document.querySelector('.addOns-type2');
+const addOnsType3 = document.querySelector('.addOns-type3');
+const addOnsType1Price = document.querySelector('.addOns-type1-price');
+const addOnsType2Price = document.querySelector('.addOns-type2-price');
+const addOnsType3Price = document.querySelector('.addOns-type3-price');
 
 
+
+
+let totalAddOns = 0;
 let currentStep = 0;
 
 
@@ -250,13 +260,15 @@ function arcadePlan(){
 
   product.forEach(product => {
     const data = product.getAttribute('data-value');
+    const arcadePlanPrice = 9;
+    const arcadePlanPriceYearly = 90;
   
     if(data === '9'){
       const planType = '(Monthly)';
       const planName = 'Arcade';
       plan.textContent = planName;
       spanTag.textContent = planType;
-      planPrice.textContent = '$9/mo'; 
+      planPrice.textContent = `$${arcadePlanPrice}/mso`; 
       spanTag.style.color = 'green';
       
     } else{
@@ -264,7 +276,7 @@ function arcadePlan(){
       const planName = 'Arcade';
       plan.textContent = planName;
       spanTag.textContent = yearlyPlan;
-      planPrice.textContent = '$90/yr'; 
+      planPrice.textContent = `$${arcadePlanPriceYearly}/yr`; 
       spanTag.style.color = 'green';
     } 
   });
@@ -281,13 +293,15 @@ function advancedPlan(){
 
   product.forEach(product => {
     const data = product.getAttribute('data-value');
+    const advancedPlanPrice = 12;
+    const advancedPlanPriceYearly = 120;
   
     if(data === '9'){
       const planType = '(Monthly)';
       const planName = 'Advanced';
       plan.textContent = planName;
       spanTag.textContent = planType;
-      planPrice.textContent = '$12/mo'; 
+      planPrice.textContent = `$${advancedPlanPrice}/mo`; 
       spanTag.style.color = 'green';
       
     } else{
@@ -295,7 +309,7 @@ function advancedPlan(){
       const planName = 'Advanced';
       plan.textContent = planName;
       spanTag.textContent = yearlyPlan;
-      planPrice.textContent = '$120/yr'; 
+      planPrice.textContent = `$${advancedPlanPriceYearly}/yr`; 
       spanTag.style.color = 'green';
     } 
   });
@@ -311,12 +325,17 @@ function advancedPlan(){
 
     product.forEach(product => {
       const data = product.getAttribute('data-value');
+      const proPlanPrice = 15;
+      const proPlanPriceyearly = 150;
+
+
+
     if(data === '9'){
       const planType = '(Monthly)';
       const planName = 'Pro';
       plan.textContent = planName;
       spanTag.textContent = planType;
-      planPrice.textContent = '$15/mo'; 
+      planPrice.textContent = `$${proPlanPrice}/mo`; 
       spanTag.style.color = 'green';
       
     } else{
@@ -324,7 +343,7 @@ function advancedPlan(){
       const planName = 'Pro';
       plan.textContent = planName;
       spanTag.textContent = yearlyPlan;
-      planPrice.textContent = '$150/yr'; 
+      planPrice.textContent = `$${proPlanPriceyearly}/yr`; 
       spanTag.style.color = 'green';
     } 
   });
@@ -333,6 +352,59 @@ function advancedPlan(){
     advancedStyle.style.borderColor = 'hsl(227, 12%, 86%)';
     proStyle.style.borderColor = 'hsl(243, 100%, 62%)';
     }
+
+// AddOns product
+
+
+     
+
+      checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+          
+          const itemValue = checkbox.value;
+          // If checkbox is checked, add the value to the total
+          if (checkbox.checked) {
+
+              if(itemValue === '1'){
+                addOnsType1.textContent = 'Online Service'
+                addOnsType1Price.textContent = `$${itemValue}/mo`;
+              } else if(itemValue === '2'){
+                addOnsType2.textContent = 'Larger Storage'
+                addOnsType2Price.textContent = `$${itemValue}/mo`;
+              } else if(itemValue === '3'){
+                addOnsType3.textContent = 'Customizable Profile'
+                addOnsType3Price.textContent = `$${itemValue}/mo`;
+              }
+
+              totalAddOns += parseInt(checkbox.value);
+          } else {
+            // If checkbox is unchecked, subtract the value from the total
+            totalAddOns -= parseInt(checkbox.value);
+            if (itemValue === '1') {
+              addOnsType1.textContent = '';
+              addOnsType1Price.textContent = '';
+            } else if (itemValue === '2') {
+              addOnsType2.textContent = '';
+              addOnsType2Price.textContent = '';
+            } else if (itemValue === '3') {
+              addOnsType3.textContent = '';
+              addOnsType3Price.textContent = '';
+            }
+          }
+          
+      
+          // Update the total element
+          // Assuming totalAddOns and planPrice are strings containing numeric values:
+          const planPriceText = planPrice.textContent;
+          const totalPriceValue = parseFloat(planPriceText.substring(1, planPriceText.length - 4));
+          let subTotalValue = parseInt(totalAddOns) + totalPriceValue;
+          subTotal.textContent = subTotalValue;
+
+
+        });
+      });
+     
+
     
 // form 
 
@@ -356,4 +428,3 @@ pro.addEventListener('click', proPlan);
 arcade.addEventListener('click', arcadePlan);
 advanced.addEventListener('click', advancedPlan);
 pro.addEventListener('click', proPlan);
-
