@@ -202,6 +202,14 @@ input::placeholder {
     padding: 0;
 
 }
+.monthly-p-pro , .monthly-p-advanced , .monthly-p-arcade , .annual-p-arcade ,  .annual-p-advanced , .annual-p-pro {
+    font-weight: 400;
+    font-size: .7em;
+    letter-spacing: 1px;
+    margin-bottom: .5em;
+}
+
+
 
 ul {
     list-style: none;
@@ -412,6 +420,8 @@ a{
     display: flex;
 }
 
+
+
 @media (min-width: 600px) {
     
     #step-1 h2 {
@@ -429,8 +439,8 @@ a{
     label {
         font-size: 1em;
     
-     
     }
+
 
     input {
         padding: 1.2em 1em;
@@ -457,6 +467,7 @@ a{
    
     }
 
+
     #step-2 h2 {
         margin-bottom: .5em;
         font-size: 2em;
@@ -471,22 +482,18 @@ a{
         font-size: 1.3em;
     }
     
-    #step-3 h2 {
-        margin-bottom: .2em;
-        font-size: 1.5em;
-        letter-spacing: 1px;
-    }
-    
-    #step-3 p {
-        margin-bottom: .2em;
-        color: hsl(240, 1%, 55%);
-        font-size: .7em;
-    }
+
 
     .name-choices h3 {
         font-size: .9em;
         letter-spacing: 1px;
         font-weight: 700;
+    }
+
+    .monthly-p-pro , .monthly-p-advanced , .monthly-p-arcade , .annual-p-arcade ,  .annual-p-advanced , .annual-p-pro {
+        margin: .3em auto .5em auto ;
+        font-size: .8em;
+
     }
     
 
@@ -545,4 +552,271 @@ a{
     font-size: 2em;
 }
 
+#step-3 p {
+    margin-bottom: 2em;
+    color: hsl(240, 1%, 55%);
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    font-size: 1.3em;
+}
+
+#step-3 h2 {
+    margin-bottom: .5em;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+.addOns-product h5{
+    font-size: 1.2em;
+    margin-top: -1.2em;
+}
+.addOns-product h6{
+    font-size: .9em;
+    margin-top: .7em;
+    letter-spacing: 1px;
+    font-weight: 400;
+
+}
+.price h6{
+    font-size: .8em;
+    letter-spacing: 1px;
+}
+
+#step-4 p {
+    margin-bottom: 2em;
+    color: hsl(240, 1%, 55%);
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    font-size: 1.1em;
+}
+
+#step-4 h2 {
+    margin-bottom: .5em;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+.total-price h5{
+    font-size: 1em;
+}
+.thankyou-container{
+    padding: 1em 3em;
+}
+#step-5 p{
+    font-size: 1.3em;
+
+}
+
+/* .addOns-type1 h6, .addOns-type1-price h6, .addOns-type2 h6, .addOns-type2-price h6, .addOns-type3 h6, .addOns-type3-price h6{
+    font-size:2em;
+
+} */
+
+
+}
+
+
+
+@media (min-width: 820px) {
+
+    .button-form {
+        font-size: 1.4em;
+    }
+    
+    #step-1 h2 {
+        margin-bottom: .5em;
+        font-size: 3em;
+
+    }
+    
+    #step-1 p {
+        margin-bottom: 1.5em;
+        line-height: 1.5em;
+        font-size: 1.8em;
+    }
+
+    label {
+        font-size: 1.3em;
+    
+    }
+
+
+    input {
+        padding: 1.5em 1em;
+        font-size: 1.2em;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .step-num {
+        gap: 1em;
+        top: 5%;
+        left: 30%;
+        transform: translate(0%, 25%);
+        z-index: 1;
+    }
+
+    .step-number {
+       
+        font-weight: 800;
+        width: 4em;
+        height: 4em;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 4em;
+        font-size: 1.2em;
+   
+    }
+
+
+    #step-2 h2 {
+        margin-bottom: .5em;
+        font-size: 3em;
+
+    }
+    
+    #step-2 p {
+        margin-bottom: .1em;
+        color: hsl(240, 1%, 55%);
+        line-height: 1.5em;
+        letter-spacing: 1px;
+        font-size: 1.8em;
+    }
+    
+
+
+    .name-choices h3 {
+        font-size: 1.7em;
+        letter-spacing: 1px;
+        font-weight: 700;
+    }
+
+    .monthly-p-pro , .monthly-p-advanced , .monthly-p-arcade , .annual-p-arcade ,  .annual-p-advanced , .annual-p-pro {
+        margin: .3em auto .5em auto ;
+        font-size: 1.3em;
+
+    }
+    
+
+    .name-choices {
+        margin-left: 1em
+    }
+
+    .switch {
+        width: 18em;
+        height: 4.3em;
+        margin: 2em;
+        background-color: hsl(206, 43%, 90%);
+        padding: .1em;
+        border: 2px solid hsl(206, 75%, 60%);
+        border-radius: 100px;
+    }
+    .monthly {
+    margin: .1em .2em;
+    padding: .9em 1em .9em 1.7em;
+    background-color: hsl(206, 75%, 60%);
+    border-radius: 50px;
+    letter-spacing: 1px;
+    transition: background-color .5s cubic-bezier(0.48, 1.1, 0.53, 1);
+    font-size: 1.3em;
+
+}
+
+.yearly {
+    margin: .1em .2em;
+    padding: .9em 1.5em .9em 1em;
+    background-color: hsl(206, 79%, 85%);
+    border-radius: 50px;
+    letter-spacing: 1px;
+    transition: background-color .5s cubic-bezier(0.48, 1.1, 0.53, 1);
+    font-size: 1.3em;
+
+}
+
+.icon img{
+    margin: .7em .3em .5em 1em;
+}
+
+.product {
+    border: 1px solid hsl(227, 12%, 86%);
+    margin-bottom: 2em;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0;
+
+
+/* }
+.button-form {
+    display: flex;
+    justify-content: space-between;
+    margin: 12em 1em;
+    font-family: 'Fraunces', serif;
+} */
+.yearly-label{
+    font-size: 3em;
+    letter-spacing: 2px;
+}
+
+#step-3 p {
+    margin-bottom: 2em;
+    color: hsl(240, 1%, 55%);
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    font-size: 1.3em;
+}
+
+#step-3 h2 {
+    margin-bottom: .5em;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+.addOns-product h5{
+    font-size: 1.2em;
+    margin-top: -1.2em;
+}
+.addOns-product h6{
+    font-size: .9em;
+    margin-top: .7em;
+    letter-spacing: 1px;
+    font-weight: 400;
+
+}
+.price h6{
+    font-size: .8em;
+    letter-spacing: 1px;
+}
+
+#step-4 p {
+    margin-bottom: 2em;
+    color: hsl(240, 1%, 55%);
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    font-size: 1.1em;
+}
+
+#step-4 h2 {
+    margin-bottom: .5em;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+.total-price h5{
+    font-size: 1em;
+}
+.thankyou-container{
+    padding: 1em 3em;
+}
+#step-5 p{
+    font-size: 1.3em;
+
+}
+
+/* .addOns-type1 h6, .addOns-type1-price h6, .addOns-type2 h6, .addOns-type2-price h6, .addOns-type3 h6, .addOns-type3-price h6{
+    font-size:2em;
+
+} */
+
+
+}
 }

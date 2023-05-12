@@ -244,7 +244,7 @@ function yearlyPlan() {
 
   yearlyLabel.forEach(label => {
     label.textContent  = '2 months free';
-    label.style.fontSize = '.6em';
+    label.style.fontSize = '.8em';
     label.style.marginTop = '-.5em';
     label.style.color = 'green';
     buttonForm.style.marginTop = '2.5em';
